@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { UserService } from './../../Services/user.service';
-import { AppGlobal,AppService } from './../../app/app.service';
+import { UserService } from './../../services/user.service';
+import { AppGlobal,AppService } from './../../services/app.service';
 import { TabsPage } from  '../tabs/tabs';
 import {  IonicPage } from 'ionic-angular';
 

@@ -6,13 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AppGlobal{
-    //缓存key的配置
-    static cache:any={
-        slides:"_dress_slides",
-        categories:"_dress_categories",
-        products:"_dress_products"
-    }
-
+   
     //接口基地址
     static domain="http://localhost:58275";
     static httpDomain="http://localhost:8080";
@@ -24,9 +18,7 @@ export class AppGlobal{
         User:'/api/User',
         File:'/Upload/file',
         Files:'/api/files',
-        getCategories:'/api/ionic3/getCategories',
-        getProducts:'/api/ionic3/getProducts',
-        getDetails:'/api/ionic3/details'
+      
     };
 }
   @Injectable()
@@ -49,52 +41,11 @@ export class AppGlobal{
                 return  str;
             }
 
-            httpGet(url,params,callback,loader:boolean=false){
-                let loading=this.loadingCtrl.create({});
-                if(loader){
-                    loading.present();
-                }
-                let realUrl=AppGlobal.domain+url+this.endcode(params);
-                this.http.get(realUrl)
-                .toPromise()
-                .then(res=>{
-                    var d=res.json();
-                    if(loader){
-                        loading.dismiss();
-                    }
-                    callback(d==null?"[]":d);
-                })
-                .catch(error=>{
-                    if(loader){
-                        loading.dismiss();
-                    }
-                    this.handleError(error);
-                })
-            }
-
+        
            
            
 
-            httpPost(url, params, callback, loader: boolean = false) {
-                let loading = this.loadingCtrl.create();
-                if (loader) {
-                    loading.present();
-                }
-                this.http.post(AppGlobal.domain + url, params)
-                    .toPromise()
-                    .then(res => {
-                        var d = res.json();
-                        if (loader) {
-                            loading.dismiss();
-                        }
-                        callback(d == null ? "[]" : d);
-                    }).catch(error => {
-                        if (loader) {
-                            loading.dismiss();
-                        }
-                        this.handleError(error);
-                    });
-            }
+          
 
             private handleError(error:Response|any){
                 let msg='';

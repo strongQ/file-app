@@ -11,9 +11,6 @@ export class TabsPage {
 
   username:string='';
   tab1Root = 'HomePage';
-  tab2Root = 'AboutPage';
-  tab3Root = 'ContactPage';
-
   constructor(public navParams: NavParams) {
 
     this.username=this.navParams.get('username');

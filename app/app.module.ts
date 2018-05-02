@@ -1,6 +1,6 @@
 
 import {HttpModule} from '@angular/http';
-import { AppService } from './app.service';
+import { AppService } from '../services/app.service';
 import { UserService } from '../Services/user.service'
 import { UploadService } from '../Services/upload.service'
 import { NgModule, ErrorHandler } from '@angular/core';

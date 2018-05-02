@@ -1,8 +1,8 @@
 import { Component,OnInit  } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {  IonicPage } from 'ionic-angular';
-import { AppService,AppGlobal} from './../../app/app.service';
-import { PostFileModel,PageDataModel } from './../../Models/DataModel';
+import { AppService,AppGlobal} from './../../services/app.service';
+import { postFileModel,pageDataModel } from './../../models/file-data-model';
 import { UploadService } from './../../Services/upload.service';
 import { ASTWithSource } from '@angular/compiler';
 import { DomSanitizer } from "@angular/platform-browser";
@@ -32,7 +32,7 @@ export class HomePage  implements OnInit {
   }
   async addFile(data:HTMLInputElement){
 
-    let postData:PostFileModel={UserID:"11111",Files:data.files,FileType:1};
+    let postData:postFileModel={userID:"11111",files:data.files,fileType:1};
     const result=await this.uploadService.uploads(postData);
     if(result.isError){
          this.appService.alert('上传保存失败!');
@@ -46,9 +46,5 @@ export class HomePage  implements OnInit {
      }
   }
 
-
   }
-
- 
-                                                                               
 }
