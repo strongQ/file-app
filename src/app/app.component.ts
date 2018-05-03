@@ -3,13 +3,14 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
-
+  // 使用懒加载，只需要用引号引起来
+ //rootPage:any = 'TabsPage';
+  rootPage:any = 'LoginPage';
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -19,4 +20,3 @@ export class MyApp {
     });
   }
 }
-
