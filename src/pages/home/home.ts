@@ -32,7 +32,7 @@ export class HomePage  implements OnInit {
   }
   async addFile(data:HTMLInputElement){
 
-    let postData:postFileModel={userID:"11111",files:data.files,fileType:1};
+    let postData:postFileModel={userID:"11111",files:data.files,fileType:'1'};
     const result=await this.uploadService.uploads(postData);
     if(result.isError){
          this.appService.alert('上传保存失败!');

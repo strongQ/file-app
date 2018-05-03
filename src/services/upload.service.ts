@@ -17,7 +17,7 @@ export class UploadService {
         const input = new FormData();
         input.append('file', fileToUpload);
         return await this.http
-            .post(this.requestFile, input).toPromise();
+            .post(this.requestFileUrl, input).toPromise();
     }
 
     // 上次多个文件
@@ -27,14 +27,14 @@ export class UploadService {
         for (let file of datas.files){
             input.append('FileList', file);
         }
-        input.append('FileType', datas.FileType);
+        input.append('FileType', datas.fileType);
         return await this.http
             .post(this.requestFilesUrl, input).toPromise();
     }
 
     // 分页获取最新上传的文件
     async GetFiles(pageSize:number,pageIndex:number):Promise<pageDataModel<any>>{        
-          const  data =await this.http.get(this.requestFiles+`/${pageIndex}/${pageSize}`).toPromise();
+          const  data =await this.http.get(this.requestFilesUrl+`/${pageIndex}/${pageSize}`).toPromise();
           return  data.json();
     }
 

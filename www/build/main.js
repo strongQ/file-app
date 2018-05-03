@@ -168,7 +168,7 @@ var UploadService = (function () {
                         input = new FormData();
                         input.append('file', fileToUpload);
                         return [4 /*yield*/, this.http
-                                .post(this.requestFile, input).toPromise()];
+                                .post(this.requestFileUrl, input).toPromise()];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
             });
@@ -187,7 +187,7 @@ var UploadService = (function () {
                             file = _a[_i];
                             input.append('FileList', file);
                         }
-                        input.append('FileType', datas.FileType);
+                        input.append('FileType', datas.fileType);
                         return [4 /*yield*/, this.http
                                 .post(this.requestFilesUrl, input).toPromise()];
                     case 1: return [2 /*return*/, _b.sent()];
@@ -201,7 +201,7 @@ var UploadService = (function () {
             var data;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.http.get(this.requestFiles + ("/" + pageIndex + "/" + pageSize)).toPromise()];
+                    case 0: return [4 /*yield*/, this.http.get(this.requestFilesUrl + ("/" + pageIndex + "/" + pageSize)).toPromise()];
                     case 1:
                         data = _a.sent();
                         return [2 /*return*/, data.json()];
@@ -211,10 +211,9 @@ var UploadService = (function () {
     };
     UploadService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
     ], UploadService);
     return UploadService;
-    var _a;
 }());
 
 //# sourceMappingURL=upload.service.js.map

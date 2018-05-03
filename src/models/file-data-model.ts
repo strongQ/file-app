@@ -14,6 +14,6 @@ export interface pageDataModel<T>{
 
 export interface postFileModel{
     userID:string;
-    files:FileList;
-    fileType:number;
+    files:any;
+    fileType:string;
 }
