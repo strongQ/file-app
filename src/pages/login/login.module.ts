@@ -9,5 +9,8 @@ import { LoginPage } from './Login';
     imports: [
         IonicPageModule.forChild(LoginPage),
     ],
+    exports: [
+        LoginPage
+      ]
 })
 export class LoginPageModule { }

@@ -9,7 +9,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 
-import{ TabsPage } from '../pages/tabs/tabs'
+
 
 
 
@@ -18,8 +18,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
-    TabsPage
+    MyApp
+    
+   
    
   ],
   imports: [
@@ -28,8 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    TabsPage
+    MyApp
+   
    
   ],
   providers: [
