@@ -25944,3 +25944,174 @@ page-login .login-button {
   font-size: 0.9em;
   background-color: #39acdc;
 }
+
+.align-center {
+  text-align: center;
+}
+
+.highlight {
+  background-color: #f4f4f4;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.top-radius {
+  border-radius: 10% 10% 0 0;
+}
+
+.bottom-radius {
+  border-radius: 0 0 10% 10%;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.transparent-header .toolbar-content,
+.transparent-header .back-button {
+  color: white;
+}
+
+.transparent-header .toolbar-background,
+.transparent-header ion-navbar,
+.transparent-header ion-header {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.transparent-header .header-md::after,
+.transparent-header .toolbar-background-ios {
+  background-image: none;
+  border-bottom: 0;
+}
+
+.transparent-header .header-ios .toolbar-background-ios,
+.transparent-header .footer-ios .toolbar-background-ios {
+  border: 0;
+}
+
+#menu-right button {
+  padding-left: 16px;
+}
+
+#menu-right ion-content {
+  background: rgba(255, 36, 36, 0.82);
+}
+
+#menu-right .menu-inner {
+  width: 10vh;
+}
+
+@media screen and (orientation: landscape) {
+  #menu-right .menu-inner {
+    width: 15vh;
+  }
+}
+
+#menu-right .active-menu-item {
+  position: absolute;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #ffffff;
+}
+
+#menu-right .label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#menu-right .list-md[no-lines] .item-block,
+#menu-right .list-md[no-lines] ion-item-options,
+#menu-right .list-md[no-lines] .item .item-inner,
+#menu-right .list-ios[no-lines] .item-block,
+#menu-right .list-ios[no-lines] ion-item-options,
+#menu-right .list-ios[no-lines] .item .item-inner {
+  padding: .3rem 0;
+  background: transparent;
+  color: white;
+}
+
+#menu-right ion-icon {
+  line-height: 1;
+}
+
+.icon-badge {
+  top: 0px;
+  right: 0px;
+  background: #FF5D5D;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  padding: 5px 8px;
+  border-radius: 15px;
+}
+
+#menu-avatar .user-avatar {
+  padding: .5em;
+}
+
+#menu-avatar h3,
+#menu-avatar .label {
+  color: white;
+  font-weight: bold;
+}
+
+#menu-avatar .item {
+  background: transparent;
+}
+
+#menu-avatar ion-content {
+  background: linear-gradient(48deg, rgba(157, 72, 173, 0.8) 0%, rgba(157, 72, 173, 0.86) 28%, rgba(0, 168, 168, 0.98) 93%, #00a8a8 100%);
+}
+
+#menu-avatar .menu-inner {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#menu-material .menu-header {
+  padding: 5px 15px;
+  background-image: url("../assets/imgs/misc/material-design-background.jpg");
+  background-size: cover;
+  color: white;
+}
+
+#menu-material .menu-header .name {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+#menu-material .menu-header .e-mail {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+#menu-material .user-avatar {
+  padding: .5em;
+  height: 12vh;
+}
+
+#menu-material h3,
+#menu-material .label {
+  color: #999;
+  font-weight: 400;
+}
+
+#menu-material ion-icon {
+  color: #777;
+}

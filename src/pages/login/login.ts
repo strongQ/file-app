@@ -3,7 +3,7 @@ import { NavController, LoadingController, IonicPage } from 'ionic-angular';
 import { UserService } from './../../services/user.service';
 import { AppGlobal,AppService } from './../../services/app.service';
 
-
+import { TabsPage } from './../tabs/tabs'
 
 
 @IonicPage()
@@ -38,7 +38,7 @@ import { AppGlobal,AppService } from './../../services/app.service';
          else
           {
             AppGlobal.UserName=this.username;
-            this.navCtrl.push('TabsPage',{
+            this.navCtrl.push(TabsPage,{
               username:this.username
             });
           }

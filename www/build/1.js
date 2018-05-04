@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 278:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(284);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var HomePageModule = (function () {
 
 /***/ }),
 
-/***/ 283:
+/***/ 284:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,7 +46,7 @@ var HomePageModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_app_service__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_upload_service__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_upload_service__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -155,9 +155,9 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\zhangqi\Desktop\ionic\my-app\file-app\src\pages\home\home.html"*/`<ion-header>\n\n  <ion-navbar>\n\n    <ion-title title>欢迎{{username}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n\n\n<ion-content padding>\n\n <ion-list>\n\n   <ion-item>\n\n     <label>选择文件</label>\n\n     <input #fileInput type="file" multiple >\n\n     <button (click)="addFile(fileInput)">添加</button>\n\n   </ion-item>\n\n </ion-list>\n\n  \n\n <ion-list>\n\n   <ion-item *ngFor="let item of items">\n\n     <img width="100" height="100" [src]="item.address">\n\n   </ion-item>\n\n </ion-list>\n\n \n\n</ion-content>\n\n`/*ion-inline-end:"C:\Users\zhangqi\Desktop\ionic\my-app\file-app\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"F:\git\ionic\file-app\src\pages\home\home.html"*/`<ion-header>\n\n  <ion-navbar>\n\n    <ion-title title>欢迎{{username}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n\n\n<ion-content padding>\n\n <ion-list>\n\n   <ion-item>\n\n     <label>选择文件</label>\n\n     <input #fileInput type="file" multiple >\n\n     <button (click)="addFile(fileInput)">添加</button>\n\n   </ion-item>\n\n </ion-list>\n\n  \n\n <ion-list>\n\n   <ion-item *ngFor="let item of items">\n\n     <img width="100" height="100" [src]="item.address">\n\n   </ion-item>\n\n </ion-list>\n\n \n\n</ion-content>\n\n`/*ion-inline-end:"F:\git\ionic\file-app\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_3__services_upload_service__["a" /* UploadService */], __WEBPACK_IMPORTED_MODULE_2__services_app_service__["b" /* AppService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_3__services_upload_service__["a" /* UploadService */], __WEBPACK_IMPORTED_MODULE_2__services_app_service__["b" /* AppService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]])
     ], HomePage);
     return HomePage;
 }());
