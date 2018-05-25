@@ -1,5 +1,5 @@
 import { Component,OnInit  } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,MenuController  } from 'ionic-angular';
 import {  IonicPage } from 'ionic-angular';
 import { AppService,AppGlobal} from './../../services/app.service';
 import { postFileModel,pageDataModel } from './../../models/file-data-model';
@@ -15,10 +15,11 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class HomePage  implements OnInit {
 
-  
+  type:number=0;
+  homeword:string='图像';
   items:Array<any>;
   username:string='';
-  constructor(private sanitizer: DomSanitizer,public uploadService:UploadService,private appService:AppService, public navCtrl: NavController) {   
+  constructor(private sanitizer: DomSanitizer,public uploadService:UploadService,private appService:AppService, public navCtrl: NavController,public menuCtrl: MenuController) {   
     
   }
 
@@ -46,5 +47,9 @@ export class HomePage  implements OnInit {
      }
   }
 
+  }
+
+  openMenu() {
+    this.menuCtrl.open();
   }
 }

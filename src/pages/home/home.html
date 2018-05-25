@@ -1,6 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title title>欢迎{{username}}</ion-title>
+  
+    <!-- <button ion-button menuToggle icon-start>
+      <ion-icon ios="ios-home" md="md-home"></ion-icon>
+      菜单
+    </button> -->
+<div>
+  <ion-row >
+    <ion-col  >
+      <button  class="menu-button"  ion-button round menuToggle color="secondary">Menu</button>
+     
+    </ion-col>
+    
+     <ion-col justify-self-center>
+      <div class="center-text">{{homeword}}</div>
+     </ion-col> 
+     <ion-col>
+       <div></div>
+     </ion-col>
+   
+  </ion-row>
+</div>
+  
+
+   
   </ion-navbar>
 </ion-header>
 
@@ -10,9 +33,16 @@
 <ion-content padding>
  <ion-list>
    <ion-item>
+      <label>选择类型</label>
+      <ion-select [(ngModel)]="type">
+          <ion-option value="0">娱乐</ion-option>
+          <ion-option value="1">风景</ion-option>
+      </ion-select>     
+   </ion-item>
+   <ion-item>
      <label>选择文件</label>
      <input #fileInput type="file" multiple >
-     <button (click)="addFile(fileInput)">添加</button>
+     <button ion-button color="secondary"  class="menu-button"  (click)="addFile(fileInput)">添加</button>
    </ion-item>
  </ion-list>
   
