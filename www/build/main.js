@@ -34,11 +34,11 @@ var map = {
 		3
 	],
 	"../pages/ionic-native/get-image/get-image.module": [
-		282,
+		283,
 		2
 	],
 	"../pages/ionic-native/ionic-native.module": [
-		283,
+		282,
 		1
 	],
 	"../pages/login/login.module": [
@@ -499,8 +499,8 @@ var AppModule = (function () {
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/ionic-native/get-image/get-image.module#GetImagePageModule', name: 'GetImagePage', segment: 'get-image', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/ionic-native/ionic-native.module#IonicNativePageModule', name: 'IonicNativePage', segment: 'ionic-native', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/ionic-native/get-image/get-image.module#GetImagePageModule', name: 'GetImagePage', segment: 'get-image', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
                     ]
@@ -630,7 +630,7 @@ var AppGlobal = (function () {
     function AppGlobal() {
     }
     //接口基地址
-    AppGlobal.domain = "http://localhost:58275";
+    AppGlobal.domain = "http://172.17.20.244:8888";
     AppGlobal.httpDomain = "http://localhost:8080";
     //用户名
     AppGlobal.UserName = '';
@@ -690,7 +690,7 @@ var AppService = (function () {
     };
     AppService.prototype.alert = function (message, callback) {
         if (callback) {
-            var alert_1 = this.alertCtrl.create({
+            var alert = this.alertCtrl.create({
                 title: '提示',
                 message: message,
                 buttons: [{
@@ -700,15 +700,15 @@ var AppService = (function () {
                         }
                     }]
             });
-            alert_1.present();
+            alert.present();
         }
         else {
-            var alert_2 = this.alertCtrl.create({
+            var alert = this.alertCtrl.create({
                 title: '提示',
                 message: message,
                 buttons: ["确定"]
             });
-            alert_2.present();
+            alert.present();
         }
     };
     AppService.prototype.toast = function (message, callback) {
@@ -768,10 +768,10 @@ var AppService = (function () {
     };
     AppService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["b" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["n" /* ToastController */]) === "function" && _e || Object])
     ], AppService);
     return AppService;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=app.service.js.map

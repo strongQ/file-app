@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 export class AppGlobal{
    
     //接口基地址
-    static domain="http://localhost:58275";
+    static domain="http://172.17.20.244:8888";
     static httpDomain="http://localhost:8080";
     //用户名
     static UserName='';
