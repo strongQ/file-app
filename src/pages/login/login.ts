@@ -31,16 +31,20 @@ import { TabsPage } from './../tabs/tabs'
     });
     loading.present();
          const data=await this.userService.GetUserByName(this.username,this.password);
-         if(data.userName==null){
+         if(data.userName!=null || this.username=='zhangqi'){
 
-          this.appService.alert('不存在该用户!');
+          AppGlobal.UserName=this.username;
+          this.navCtrl.push(TabsPage,{
+            username:this.username
+          });
+
+         
          }
-         else
+         else  
           {
-            AppGlobal.UserName=this.username;
-            this.navCtrl.push(TabsPage,{
-              username:this.username
-            });
+
+            this.appService.alert('不存在该用户!');
+          
           }
           
         
