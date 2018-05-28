@@ -14,7 +14,7 @@ import {
 })
 export class GetImagePage {
 
-  placeholder = 'assets/img/avatar/girl-avatar.png';
+  placeholder = 'assets/imgs/avatar/girl-avatar.png';
   chosenPicture: any;
 
   constructor(
