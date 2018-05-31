@@ -15,7 +15,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class HomePage  implements OnInit {
 
-  type:number=0;
+  type:any=1;
   homeword:string='图像';
   items:Array<any>;
   username:string='';
@@ -33,7 +33,7 @@ export class HomePage  implements OnInit {
   }
   async addFile(data:HTMLInputElement){
 
-    let postData:postFileModel={userID:"11111",files:data.files,fileType:'1'};
+    let postData:postFileModel={userID:"11111",files:data.files,fileType:this.type};
     const result=await this.uploadService.uploads(postData);
     if(result.isError){
          this.appService.alert('上传保存失败!');

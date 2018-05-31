@@ -35,15 +35,24 @@
    <ion-item>
       <label>选择类型</label>
       <ion-select [(ngModel)]="type">
-          <ion-option value="0">娱乐</ion-option>
-          <ion-option value="1">风景</ion-option>
+          <ion-option value="0">文件</ion-option>
+          <ion-option value="1">图片</ion-option>
+          <ion-option value="2">音频</ion-option>
       </ion-select>     
    </ion-item>
    <ion-item>
-     <label>选择文件</label>
+    
+    
      <input #fileInput type="file" multiple >
-     <button ion-button color="secondary"  class="menu-button"  (click)="addFile(fileInput)">添加</button>
+    
+     
    </ion-item>
+   <ion-item>
+    
+     
+     
+      <button ion-button color="secondary"  class="menu-button"  (click)="addFile(fileInput)">添加</button>
+    </ion-item>
  </ion-list>
   
  <ion-list>
