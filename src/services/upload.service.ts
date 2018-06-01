@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { AppGlobal,AppService} from './app.service';
-import { pageDataModel,postFileModel } from '../models/file-data-model'
+import { pageDataModel,postFileModel,fileTypeEnum } from '../models/file-data-model'
 
 
 @Injectable()
@@ -20,7 +20,7 @@ export class UploadService {
             .post(this.requestFileUrl, input).toPromise();
     }
 
-    // 上次多个文件
+    // 上传多个文件
     async uploads(datas: postFileModel): Promise<any> {
         const input = new FormData();
         input.append('UserID', datas.userID);
@@ -33,8 +33,8 @@ export class UploadService {
     }
 
     // 分页获取最新上传的文件
-    async GetFiles(pageSize:number,pageIndex:number):Promise<pageDataModel<any>>{        
-          const  data =await this.http.get(this.requestFilesUrl+`/${pageIndex}/${pageSize}`).toPromise();
+    async GetFiles(pageSize:number,pageIndex:number,type:fileTypeEnum):Promise<pageDataModel<any>>{        
+          const  data =await this.http.get(this.requestFilesUrl+`/${pageIndex}/${pageSize}?type=${type}`).toPromise();
           return  data.json();
     }
 

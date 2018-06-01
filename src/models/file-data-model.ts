@@ -17,3 +17,9 @@ export interface postFileModel{
     files:any;
     fileType:string;
 }
+
+export enum fileTypeEnum{
+    File,
+    Picture,
+    Audio
+}
